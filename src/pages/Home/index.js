@@ -1,8 +1,8 @@
 import React from "react";
 import { BaseLayout } from "../../layout/BaseLayout";
-import Post from "../../common/Post";
-import PostComments from "../../common/Comment/PostComments";
-import Card from "../../common/Card";
+import Post from "../../components/Post";
+import PostComments from "../../components/Comment/PostComments";
+import Card from "../../components/Card";
 
 export const Home = () => {
   return (
