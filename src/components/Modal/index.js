@@ -25,10 +25,7 @@ function Modal() {
               Register
             </button>
           </div>
-          <button
-            onClick={hideModal}
-            className="bg-gray-400 hover: bg-gray-800"
-          >
+          <button onClick={hideModal} className="">
             Close
           </button>
           <input

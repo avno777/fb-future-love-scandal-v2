@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { EnterIcon } from "../../common/CustomIcon";
+import { ModalProvider } from "../../context/ModalContext";
+import Modal from "../Modal";
 
 function PostComments() {
   const [radomEvents, setRandomEvents] = useState([]);
