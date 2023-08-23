@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { Profile } from "../pages/Profile";
 import { Home } from "../pages/Home";
 import "..";
+import TestParser from "../pages/TestParser";
 
 export const router = createBrowserRouter([
   {
@@ -11,5 +12,9 @@ export const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile />,
+  },
+  {
+    path: "/parser",
+    element: <TestParser />,
   },
 ]);
