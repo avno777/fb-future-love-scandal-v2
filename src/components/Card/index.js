@@ -32,7 +32,7 @@ function Card() {
   return (
     <div className="grid grid-cols-4 gap-4">
       {radomEvents.map((content) => (
-        <div className=" bg-white px-2 pt-2 rounded-mlarge">
+        <div className=" bg-white px-2 pt-2 rounded-mlarge drop-shadow-md">
           <div className="mb-5 h-3/5">
             <img
               src={content.User_Avatar}

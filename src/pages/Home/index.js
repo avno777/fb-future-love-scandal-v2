@@ -8,11 +8,11 @@ export const Home = () => {
   return (
     <BaseLayout>
       <div className="w-full">
-        <div className=" bg-custom-bg pl-4 pr-6 pt-36">
-          <div className="grid grid-cols-5 gap-4">
+        <div className=" bg-gray-custom pl-5 pr-7 pt-36 pb-12">
+          <div className="grid grid-cols-4 gap-4">
             <OnlineUser />
-           <PostHome/>
-            <HomeCart/>
+            <PostHome />
+            <HomeCart />
           </div>
         </div>
       </div>

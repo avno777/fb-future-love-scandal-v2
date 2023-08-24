@@ -32,7 +32,7 @@ function Post() {
   }, []);
 
   return (
-    <div className="p-5 bg-white flex w-9/12 items-start rounded-mlarge mr-4">
+    <div className="p-5 bg-white flex w-9/12 items-start rounded-mlarge mr-4 drop-shadow-md">
       <div className="grow mr-8 w-3/5">
         <img
           src={radomEvent.User_Avatar}

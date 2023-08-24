@@ -101,10 +101,10 @@ function PostComments() {
   // }, [comments, eventOnClick]);
 
   return (
-    <div className=" bg-white w-3/12 rounded-mlarge">
+    <div className=" bg-white w-3/12 rounded-mlarge drop-shadow-md">
       <div className="text-center text-lg py-6 relative text-2xl font-extrabold">
         Comments
-        <div className="absolute left-0 right-0 h-0.5 bg-custom-bg bottom-0"></div>
+        <div className="absolute left-0 right-0 h-0.5 bg-gray-custom bottom-0"></div>
       </div>
       <div className="overflow-y-scroll h-80 scrollbar-thin scrollbar-thumb-rounded-md scrollbar-thumb-gray-400 scrollbar-track-gray-300">
         {radomEvents.map((content) => (
@@ -118,7 +118,7 @@ function PostComments() {
                 />
               </div>
               <div className="ml-3 w-full">
-                <div className="border-black bg-custom-bg rounded-mlarge h-auto w-full px-3 pb-2 mb-2">
+                <div className="border-black bg-gray-custom rounded-mlarge h-auto w-full px-3 pb-2 mb-2">
                   <div>
                     <span className="font-bold">{content.User_Name}</span>
                   </div>
@@ -175,7 +175,7 @@ function PostComments() {
                           />
                         </div>
                         <div className="ml-3 w-full">
-                          <div className="border-black bg-custom-bg rounded-mlarge h-auto w-full px-3 pb-2 mb-2">
+                          <div className="border-black bg-gray-custom rounded-mlarge h-auto w-full px-3 pb-2 mb-2">
                             <div className="font-bold text-ellipsis overflow-hidden ...">
                               {comment.User_Name}
                             </div>

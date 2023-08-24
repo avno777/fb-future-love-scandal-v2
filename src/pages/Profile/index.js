@@ -9,7 +9,7 @@ export const Profile = () => {
     <BaseLayout>
       <div className="w-full">
         <div>
-          <div className="bg-custom-bg pt-36 px-4 w-screen ">
+          <div className="bg-gray-custom pt-36 px-4 w-screen ">
             <div className="flex">
               <Post></Post>
               <PostComments></PostComments>

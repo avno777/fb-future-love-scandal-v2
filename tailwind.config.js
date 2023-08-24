@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "custom-bg": "#F0F2F5",
+        "gray-custom": "#F0F2F5",
       },
       fontFamily: {
         starborn: ["Starborn", "fantasy"],
@@ -25,9 +25,10 @@ module.exports = {
       DEFAULT: "4px",
       md: "0.375rem",
       lg: "0.5rem",
-      full: "9999px",
+      xl: "0.75rem",
       mlarge: "20px",
       large: "38px",
+      full: "9999px",
     },
   },
   plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
