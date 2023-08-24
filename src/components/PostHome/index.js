@@ -157,25 +157,34 @@ const PostHome = () => {
               <div>
                 {isShowMore ? (
                   <>
-                    <div className="mt-6 mx-20 flex">
-                      <img
-                        src={content.User_Avatar}
-                        className="w-[50px] h-[50px] rounded-full"
-                        alt="User Avatar"
-                      />
-                      <div className="w-full h-[70px] ml-4 px-5 py-2 rounded-[20px] bg-slate-100">
-                        <h2 className="text-slate-700">username</h2>
-                        <p className="font-bold mt-1">
-                          Takes advantage of people's trust by borrowing and not
-                          returning t money.
-                        </p>
-                      </div>
-                    </div>
+                    {comments
+                      .filter(
+                        (comment) =>
+                          comment.STT_SK === content.STT &&
+                          comment.idParent.toLowerCase() ===
+                            content.idParent.toLowerCase()
+                      )
+                      .slice(1)
+                      .map((comment) => (
+                        <div className="mt-6 mx-20 flex">
+                          <img
+                            src={comment.User_Avatar}
+                            className="w-11 h-11 rounded-full"
+                            alt="User Avatar"
+                          />
+                          <div className="w-full h-[70px] ml-4 px-5 py-2 rounded-[20px] bg-slate-100">
+                            <h2 className="text-slate-700">
+                              {comment.User_Name}
+                            </h2>
+                            <p className="font-bold mt-1">{comment.Comment}</p>
+                          </div>
+                        </div>
+                      ))}
                   </>
                 ) : (
                   ""
                 )}
-                <div className="flex justify-center items-center mt-4 mb-4">
+                <div className="flex justify-center items-center">
                   {isShowMore ? (
                     <button
                       className="font-semibold"

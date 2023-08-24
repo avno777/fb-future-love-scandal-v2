@@ -43,10 +43,10 @@ const HomeCart = () => {
                 className="w-full h-[240px] object-cover rounded-mlarge"
               />
             </div>
-            <div className="flex py-6">
+            <div className="flex py-6 justify-around">
               <div className="flex ml-4">
                 <ViewIcon width={24} height={24} />
-                <p className="font-semibold">13.2k views</p>
+                <p className="font-semibold ml-2">13.2k views</p>
               </div>
               <div className="flex ml-6">
                 <p className="font-semibold mr-2">14</p>
