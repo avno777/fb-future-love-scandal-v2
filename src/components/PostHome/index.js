@@ -157,25 +157,40 @@ const PostHome = () => {
               <div>
                 {isShowMore ? (
                   <>
-                    <div className="mt-6 mx-20 flex">
-                      <img
-                        src={content.User_Avatar}
-                        className="w-[50px] h-[50px] rounded-full"
-                        alt="User Avatar"
-                      />
-                      <div className="w-full h-[70px] ml-4 px-5 py-2 rounded-[20px] bg-slate-100">
-                        <h2 className="text-slate-700">username</h2>
-                        <p className="font-bold mt-1">
-                          Takes advantage of people's trust by borrowing and not
-                          returning t money.
-                        </p>
-                      </div>
-                    </div>
+                    {comments
+                      .filter(
+                        (comment) =>
+                          comment.STT_SK === content.STT &&
+                          comment.idParent.toLowerCase() ===
+                            content.idParent.toLowerCase()
+                      )
+                      .slice(1)
+                      .map((comment) => (
+                        <div className="flex">
+                          <div>
+                            <img
+                              src={comment.User_Avatar}
+                              alt="User Avatar"
+                              className="w-11 h-11 object-cover rounded-full mx-auto items-center"
+                            />
+                          </div>
+                          <div className="ml-3 w-full">
+                            <div className="border-black bg-gray-custom rounded-mlarge h-auto w-full px-3 pb-2 mb-2">
+                              <div>
+                                <span className="font-bold">
+                                  {comment.User_Name}
+                                </span>
+                              </div>
+                              <div className="w-full">{comment.Comment}</div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                   </>
                 ) : (
                   ""
                 )}
-                <div className="flex justify-center items-center mt-4 mb-4">
+                <div className="flex justify-center items-center">
                   {isShowMore ? (
                     <button
                       className="font-semibold"
