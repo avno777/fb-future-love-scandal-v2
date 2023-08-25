@@ -166,17 +166,23 @@ const PostHome = () => {
                       )
                       .slice(1)
                       .map((comment) => (
-                        <div className="mt-6 mx-20 flex">
-                          <img
-                            src={comment.User_Avatar}
-                            className="w-11 h-11 rounded-full"
-                            alt="User Avatar"
-                          />
-                          <div className="w-full h-[70px] ml-4 px-5 py-2 rounded-[20px] bg-slate-100">
-                            <h2 className="text-slate-700">
-                              {comment.User_Name}
-                            </h2>
-                            <p className="font-bold mt-1">{comment.Comment}</p>
+                        <div className="flex">
+                          <div>
+                            <img
+                              src={comment.User_Avatar}
+                              alt="User Avatar"
+                              className="w-11 h-11 object-cover rounded-full mx-auto items-center"
+                            />
+                          </div>
+                          <div className="ml-3 w-full">
+                            <div className="border-black bg-gray-custom rounded-mlarge h-auto w-full px-3 pb-2 mb-2">
+                              <div>
+                                <span className="font-bold">
+                                  {comment.User_Name}
+                                </span>
+                              </div>
+                              <div className="w-full">{comment.Comment}</div>
+                            </div>
                           </div>
                         </div>
                       ))}
