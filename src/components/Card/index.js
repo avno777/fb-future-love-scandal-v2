@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { ViewIcon, ShareIcon, CommentIcon } from "../../common/CustomIcon";
 
-function Card() {
+export const Card = () => {
   const [radomEvents, setRandomEvents] = useState([]);
   useEffect(() => {
     async function fetchData() {
@@ -70,6 +70,6 @@ function Card() {
       ;
     </div>
   );
-}
+};
 
 export default Card;

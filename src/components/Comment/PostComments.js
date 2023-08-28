@@ -4,7 +4,7 @@ import { ModalProvider } from "../../context/ModalContext";
 import Modal from "../Modal";
 import { Event } from "./Event";
 
-function PostComments() {
+export const PostComments = () => {
   const [radomEvents, setRandomEvents] = useState([]);
   const [comments, setComment] = useState([]);
   const [eventOnClick, setEventOnClick] = useState(null);
@@ -85,19 +85,6 @@ function PostComments() {
     }));
   };
 
-  // useEffect(() => {
-  //   const filteredItems = comments.filter((item) => {
-  //     return (
-  //       item.STT_SK === (eventOnClick?.STT || "") &&
-  //       item.idParent.toLowerCase() ===
-  //         (eventOnClick?.idParent || "").toLowerCase()
-  //     );
-  //   });
-  //   console.log("eventOnClick", eventOnClick);
-  //   setSelectedComment(filteredItems);
-  //   console.log("filteredItems", filteredItems);
-  // }, [comments, eventOnClick]);
-
   return (
     <div className=" bg-white w-3/12 rounded-mlarge drop-shadow-md">
       <div className="text-center text-lg py-6 relative text-2xl font-extrabold">
@@ -119,12 +106,4 @@ function PostComments() {
       </div>
     </div>
   );
-}
-
-{
-  /* <img data-visualcompletion="media-vc-image" alt="Có thể là hình ảnh về 2 người và văn bản" class="x85a59c x193iq5w x4fas0m x19kjcj4" referrerpolicy="origin-when-cross-origin" src="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/347414219_10222242820329797_1721002249522354565_n.jpg?stp=cp6_dst-jpg&amp;_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=8bfeb9&amp;_nc_ohc=H-PTRKGMdzYAX9j53gq&amp;_nc_ht=scontent.fhan2-3.fna&amp;oh=00_AfD6I8QuxVPlhPku_rpuVq0StrLv-SQaWqXPW5E9i0rhAQ&amp;oe=64E64E63">
-
-Có thể là hình ảnh về 2 người và văn bản */
-}
-
-export default PostComments;
+};
